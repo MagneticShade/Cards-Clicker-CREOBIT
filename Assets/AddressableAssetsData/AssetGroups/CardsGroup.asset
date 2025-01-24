@@ -12,9 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
   m_Name: CardsGroup
   m_EditorClassIdentifier: 
-  m_GroupName: CardsAssets
+  m_GroupName: CardsGroup
   m_GUID: 696fed6483d5797468d31c6bef0e9ce6
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 4ec556b7d5faa384e81e9420eb6761b7
+    m_Address: Assets/Prefabs/Cards
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bf31f5fc5402f9042a366bedd1621559
+    m_Address: Assets/Scripts/ScriptableObjects/Instances/Cards
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c7a510d77a1c24e4c9335639acabd2dc
+    m_Address: Assets/Scripts/ScriptableObjects/Instances/CardHolder.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 054f57796b1f2a947bd9c4ce10f32311, type: 2}
   m_SchemaSet:

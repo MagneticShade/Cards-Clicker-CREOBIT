@@ -1,27 +1,32 @@
-using System.Threading.Tasks;
-using Cysharp.Threading.Tasks;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 public class PauseScript : MonoBehaviour
 {
 
     [SerializeField] Scene targetScene;
     [SerializeField] SceneController sceneController;
-    public void Pause(){
+    public void Pause()
+    {
         gameObject.SetActive(true);
-        Time.timeScale=0;
+        Time.timeScale = 0;
     }
 
-    public async  void ChangeScene(){
+    public async void ChangeScene()
+    {
         await sceneController.ChangeScene(targetScene);
-        Time.timeScale=1;
+        Time.timeScale = 1;
     }
 
-    public void UnPause(){
+    public void UnPause()
+    {
         gameObject.SetActive(false);
-        Time.timeScale=1;
+        Time.timeScale = 1;
+    }
+
+    public async void QuitToMainMenu()
+    {
+        await sceneController.ChangeScene(Scene.MainMenu);
+        Time.timeScale = 1;
     }
 
 

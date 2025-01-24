@@ -8,58 +8,70 @@ using UnityEngine.SceneManagement;
 
 public class SaveDataManager : MonoBehaviour
 {
-    private SaveData saveData=null;
-    public static SaveDataManager instance{get; private set;}
+    private SaveData saveData = null;
+    public static SaveDataManager instance { get; private set; }
     private FileSystemManager fileSystemManager;
     private List<IDataPersistance> dataList;
 
-    private void Awake(){
-        if (instance!=null){
+    private void Awake()
+    {
+        if (instance != null)
+        {
             DestroyImmediate(this);
         }
-        else{
+        else
+        {
             DontDestroyOnLoad(this);
-            instance=this;
+            instance = this;
         }
     }
 
-    private void Start(){
-        fileSystemManager=new FileSystemManager(Application.persistentDataPath);
+    private void Start()
+    {
+        fileSystemManager = new FileSystemManager(Application.persistentDataPath);
         OnSceneLoad();
     }
-    
-    public void LoadGame(){
-        saveData=fileSystemManager.QuickLoad();
+
+    public void LoadGame()
+    {
+        saveData = fileSystemManager.QuickLoad();
         ForeachLoad(dataList);
     }
 
-    public void OnSceneLoad(){
-        dataList=FindAllIDataPersistanceExamplars();
+    public void OnSceneLoad()
+    {
+        dataList = FindAllIDataPersistanceExamplars();
         LoadGame();
     }
 
-    public void SaveGame(){
+    public void SaveGame()
+    {
         ForeachSave(dataList);
-        fileSystemManager.Save(saveData,"quicksave");
+        fileSystemManager.Save(saveData, "quicksave");
     }
 
 
-    public  List<IDataPersistance>FindAllIDataPersistanceExamplars(){
-        IEnumerable<IDataPersistance> dataPersistances=FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include,FindObjectsSortMode.None).OfType<IDataPersistance>();
+    public List<IDataPersistance> FindAllIDataPersistanceExamplars()
+    {
+        IEnumerable<IDataPersistance> dataPersistances = FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None).OfType<IDataPersistance>();
         return new List<IDataPersistance>(dataPersistances);
     }
 
-    public void ForeachLoad(List<IDataPersistance> dataPersistances){
-        foreach(IDataPersistance dataPersistance in dataPersistances){
+    public void ForeachLoad(List<IDataPersistance> dataPersistances)
+    {
+        foreach (IDataPersistance dataPersistance in dataPersistances)
+        {
             dataPersistance.LoadData(saveData);
         }
-        
+
     }
 
-    public void ForeachSave(List<IDataPersistance> dataPersistances){
-        foreach(IDataPersistance dataPersistance in dataPersistances){
+    public void ForeachSave(List<IDataPersistance> dataPersistances)
+    {
+        foreach (IDataPersistance dataPersistance in dataPersistances)
+        {
             dataPersistance.SaveData(ref saveData);
         }
-        
+
     }
 }

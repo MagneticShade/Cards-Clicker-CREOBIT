@@ -10,18 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: ClickerGroup
+  m_Name: ScenesGroup
   m_EditorClassIdentifier: 
-  m_GroupName: ClickerGroup
-  m_GUID: 56e597783e95849459df699755392d30
+  m_GroupName: ScenesGroup
+  m_GUID: a54b8088e37b62d4394a1b6d57a9bcba
   m_SerializeEntries:
-  - m_GUID: 0cdd323451983c74a9dbdd7c44e09c1b
-    m_Address: Assets/Prefabs/ItemInTheShop.prefab
+  - m_GUID: 2cda990e2423bbf4892e6590ba056729
+    m_Address: Assets/Scenes/Clicker.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 94e2b5c98e86f464b806e8a5975eeff5
-    m_Address: Assets/Scripts/ScriptableObjects/Instances/ButtonSprites.asset
+  - m_GUID: 83f319bd367a445419fa6a7ba9b89899
+    m_Address: Assets/Scenes/MainMenu.unity
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8dc38ea6ad4d30409c506ff1fff809d
+    m_Address: Assets/Scenes/Cards.unity
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -29,5 +34,5 @@ MonoBehaviour:
   m_Settings: {fileID: 11400000, guid: 054f57796b1f2a947bd9c4ce10f32311, type: 2}
   m_SchemaSet:
     m_Schemas:
-    - {fileID: 11400000, guid: 23a26fdda025d4645b353302d8bfabcb, type: 2}
-    - {fileID: 11400000, guid: 2e3bdfba867bb3a4fa87db0df464b3cd, type: 2}
+    - {fileID: 11400000, guid: 8c73e74a8dcb6f146b8a9ec0702683aa, type: 2}
+    - {fileID: 11400000, guid: 1e96d8f3a63825841a020ae835839bc9, type: 2}

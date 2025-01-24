@@ -3,47 +3,55 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using Unity.VisualScripting;
+using Cysharp.Threading.Tasks;
 
-public class ScoreScript : MonoBehaviour,IDataPersistance
+public class ScoreScript : MonoBehaviour, IDataPersistance
 {
     [SerializeField] private TextMeshProUGUI oreText;
     [SerializeField] private TextMeshProUGUI goldText;
 
     private int ore;
     private int gold;
-    private void UpdateGold(){
+    private void UpdateGold()
+    {
         goldText.text = Convert.ToString(gold);
     }
 
-    private void UpdateOre(){
+    private void UpdateOre()
+    {
         oreText.text = Convert.ToString(ore);
     }
 
-    public int GetCoins(){
+    public int GetCoins()
+    {
         return gold;
     }
 
-    public void AddOre(int ammount){
-        ore+=ammount;
+    public void AddOre(int ammount)
+    {
+        ore += ammount;
         UpdateOre();
-        
+
     }
 
-    public void ExchangeOre(){
-        if (ore!=0){
-            gold = ore*2 +gold;
+    public void ExchangeOre()
+    {
+        if (ore != 0)
+        {
+            gold = ore * 2 + gold;
             ore = 0;
             UpdateGold();
             UpdateOre();
         }
     }
 
-    public void DecreaseCoins(int value){
-        gold -=value;
+    public void DecreaseCoins(int value)
+    {
+        gold -= value;
         UpdateGold();
     }
 
-    public void LoadData(SaveData saveData)
+    public async UniTask LoadData(SaveData saveData)
     {
         ore = saveData.ore;
         gold = saveData.gold;
@@ -51,10 +59,10 @@ public class ScoreScript : MonoBehaviour,IDataPersistance
         UpdateGold();
     }
 
-    
+
     public void SaveData(ref SaveData saveData)
     {
         saveData.ore = ore;
-        saveData.gold=gold; 
+        saveData.gold = gold;
     }
 }

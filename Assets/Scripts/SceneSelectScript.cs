@@ -7,15 +7,18 @@ public class SceneSelectScript : MonoBehaviour
     [SerializeField] Scene clicker;
     [SerializeField] SceneController sceneController;
 
-    public void UnPause(){
+    public void UnPause()
+    {
         gameObject.SetActive(false);
     }
 
-    public async void LoadCards(){
+    public async void LoadCards()
+    {
         await sceneController.ChangeScene(cards);
     }
 
-    public async void LoadClicker(){
+    public async void LoadClicker()
+    {
         await sceneController.ChangeScene(clicker);
     }
 }

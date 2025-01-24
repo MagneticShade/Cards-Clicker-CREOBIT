@@ -6,12 +6,14 @@ public class Card : ScriptableObject
     public Sprite sprite;
     public int power;
 
-    public Sprite GetCardSprite(){
+    public Sprite GetCardSprite()
+    {
         return sprite;
     }
 
-    public int GetCardPower(){
+    public int GetCardPower()
+    {
         return power;
     }
-    
+
 }

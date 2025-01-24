@@ -54,7 +54,12 @@
         "ProjectSettings/": true,
         "UserSettings/": true,
         "temp/": true,
-        "Temp/": true
+        "Temp/": true,
+
     },
-    "dotnet.defaultSolution": "Clicker+Cards.sln"
+    "dotnet.defaultSolution": "Clicker+Cards.sln",
+    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.enableEditorConfigSupport": true,
+
+
 }

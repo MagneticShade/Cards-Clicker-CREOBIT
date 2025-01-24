@@ -4,11 +4,13 @@ public class MainMenuScript : MonoBehaviour
 {
     [SerializeField] GameObject selectSceneMenu;
 
-    public void StartGame(){
+    public void StartGame()
+    {
         selectSceneMenu.SetActive(true);
     }
 
-    public void Quit(){
+    public void Quit()
+    {
         Application.Quit();
     }
 }

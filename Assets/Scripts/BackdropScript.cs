@@ -11,7 +11,8 @@ public class BackdropScript : MonoBehaviour, IPointerClickHandler
         gameObject.SetActive(false);
     }
 
-    public void Open(){
+    public void Open()
+    {
         gameObject.SetActive(true);
     }
 }

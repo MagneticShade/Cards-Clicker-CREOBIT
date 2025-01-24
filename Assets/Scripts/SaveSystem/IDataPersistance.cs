@@ -1,18 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Cysharp.Threading.Tasks;
 
 public interface IDataPersistance
 {
-  
-    public void LoadData(SaveData saveData)
+
+    public async UniTask LoadData(SaveData saveData)
     {
-        
+
     }
 
-    
+
     public void SaveData(ref SaveData saveData)
     {
-        
+
     }
 }

@@ -1,17 +1,20 @@
 using System.Collections.Generic;
+
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "ButtonSprites", menuName = "Scriptable Objects/ButtonSprites")]
 public class ButtonSprites : ScriptableObject
 {
-    [SerializeField] private  List<Sprite> sprites;
+    [SerializeField] private List<Sprite> sprites;
 
 
-    public Sprite GetSharpnesSprite(){
+    public Sprite GetSharpnesSprite()
+    {
         return sprites[0];
     }
 
-    public Sprite GetStaminaSprite(){
+    public Sprite GetStaminaSprite()
+    {
         return sprites[1];
     }
 
