@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: ClickerGroup
+  m_EditorClassIdentifier: 
+  m_GroupName: ClickerGroup
+  m_GUID: 56e597783e95849459df699755392d30
+  m_SerializeEntries:
+  - m_GUID: 0cdd323451983c74a9dbdd7c44e09c1b
+    m_Address: Assets/Prefabs/ItemInTheShop.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ec556b7d5faa384e81e9420eb6761b7
+    m_Address: Assets/Prefabs/Cards
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 054f57796b1f2a947bd9c4ce10f32311, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 23a26fdda025d4645b353302d8bfabcb, type: 2}
+    - {fileID: 11400000, guid: 2e3bdfba867bb3a4fa87db0df464b3cd, type: 2}
